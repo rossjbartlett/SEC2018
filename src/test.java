@@ -1,4 +1,3 @@
-package sec2018;
 
 public class test {
 
