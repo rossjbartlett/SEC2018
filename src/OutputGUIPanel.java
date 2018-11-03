@@ -6,9 +6,8 @@ import javax.swing.JPanel;
 
 public class OutputGUIPanel extends JPanel{
 
-	public OutputGUIPanel(String routName, ArrayList<BusStop> path, int numOfBusses, float costTorun, int CommunteTime) {
-		setLayout(new FlowLayout());
-
+	public OutputGUIPanel(String routeName, BusRoute route) {
+	
 	}
 
 }
