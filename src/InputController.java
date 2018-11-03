@@ -35,8 +35,10 @@ public class InputController {
 				}
 				Demo d = new Demo(filename);
 				d.runDemo();
-				//display output
 				
+				//display output
+				new OutputGUI(new OutputGUIPanel(1, d.routes[0]), new OutputGUIPanel(2, d.routes[1]),
+						new OutputGUIPanel(3, d.routes[2]));
 				
 			}
 			else {
