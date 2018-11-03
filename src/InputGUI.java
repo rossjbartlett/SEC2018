@@ -10,7 +10,7 @@ import javax.swing.JTextField;
 
 public class InputGUI extends JFrame{
 
-    private JButton runButton = new JButton("RunApplication");
+    private JButton runButton = new JButton("Run Application");
     
     private JTextField costField = new JTextField(20);
     private JTextField capacityField = new JTextField(20);

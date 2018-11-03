@@ -14,7 +14,7 @@ public class OutputGUI extends JFrame{
 		add(panel2);
 		add(panel3);
 		
-		costJLabel.setText("Cost: $"+cost);
+		costJLabel.setText("Net Profit: $"+cost*-1);
 		costJLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
 		add(costJLabel);
 		
