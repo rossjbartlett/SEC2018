@@ -12,15 +12,15 @@ public class RouteSystem {
 	
 	public int GenerateCost() {
 		int cost = 0;
-		int totalPeople = 0;
 		for(int i = 0; i < RouteList.size(); i++) {
+			int totalRoutePeople = 0;
 			ArrayList<BusStop> RouteStops = this.RouteList.get(i).getStops();
 			ArrayList<Bus> Busses = this.RouteList.get(i).getBusses();
 			cost += RouteStops.size() * 5;
 			for(int j = 0; j < RouteStops.size(); i++) {
-				totalPeople += RouteStops.get(i).getPeople();
+				totalRoutePeople += RouteStops.get(i).getPeople();
 			}
-			cost -= totalPeople * Busses.get(0).getCost();
+			cost -= totalRoutePeople * Busses.get(0).getCost();
 		}
 		
 		return cost;
