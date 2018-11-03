@@ -12,9 +12,10 @@ public class Demo {
 		
 		System.out.println("Printing lines read:");
 		for(InputLine line : inputLines) {
+			//TODO remove this print for testing
 			line.printInputLine();
 			
-			//process each input line into the system
+			//now process each input line into the system
 		}
 		
 	}

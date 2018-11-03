@@ -34,8 +34,8 @@ public class ReadInputFile {
 			     numPpl = scanner.nextInt();
 			     
 			     InputLine line = new InputLine(stopx, stopy, destx, desty, numPpl);
-			     //TODO remove for testing
-			     System.out.print("read line: "); line.printInputLine();
+			     //TODO remove this print for testing
+			     //System.out.print("read line: "); line.printInputLine();
 			     inputLines.add(line);
 			}
 			scanner.close();
