@@ -37,6 +37,14 @@ public class InputController {
 				d.runDemo();
 				//display output
 				
+				OutputGUIPanel [] panels = new OutputGUIPanel[3];
+				for(int i = 0; i < 3; i++) {
+					panels[i] = new OutputGUIPanel(i, d.routes[i]); // routeNumber, route
+				}
+				
+				OutputGUI outGUI = new OutputGUI(d.expenseCost, panels[0], panels[1], panels[2]);
+				
+				
 				
 			}
 			else {

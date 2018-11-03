@@ -17,7 +17,7 @@ public class InputGUI extends JFrame{
     private JTextField fileNameField = new JTextField(20);
 
 	public InputGUI() {
-		setTitle("City of Algary bus routing application");
+		setTitle("City of Algary Bus Routing Application");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLayout(new BoxLayout(getContentPane(), BoxLayout.PAGE_AXIS));
 		setPreferredSize(new Dimension(400,250));
