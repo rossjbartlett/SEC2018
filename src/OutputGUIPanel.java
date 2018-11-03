@@ -20,6 +20,7 @@ public class OutputGUIPanel extends JPanel{
 	private JLabel deployedBusesJLabel = new JLabel();
 	private JLabel commuteTimeJLabel = new JLabel();
 	private JLabel routeCostJLabel = new JLabel();
+	private JLabel totalStopsJLabel = new JLabel();
 
 	
 	DefaultListModel<BusStop> routeListModel = new DefaultListModel<>(); 
@@ -47,6 +48,8 @@ public class OutputGUIPanel extends JPanel{
 		addRoutesList();
 		
 		makeJLabel(deployedBusesJLabel,"Deployed Buses: "+route.numBuses);
+		makeJLabel(totalStopsJLabel,"Stops: "+route.stops);
+
 		makeJLabel(commuteTimeJLabel,"Commute Time: "+route.pathLength+ "min");
 		makeJLabel(routeCostJLabel,"Cost: $"+route.getRouteCost());
 

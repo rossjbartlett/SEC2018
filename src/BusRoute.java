@@ -9,6 +9,7 @@ public class BusRoute {
 	//private ArrayList<Bus> busses;
 	int numBuses=0;
 	int totalPplServed = 0;
+	int stops = 0;
 
 
 	public BusRoute() {
@@ -34,8 +35,10 @@ public class BusRoute {
 		
 		System.out.println("Heading to pickup location");
 		getToStop(pickupStop);
+		stops++;
 		System.out.println("Picked up people");
 		getToStop(destStop);
+		stops++;
 		System.out.println("Dropped off people");
 
 	}
