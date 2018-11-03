@@ -10,7 +10,7 @@ import javax.swing.JTextField;
 
 public class InputGUI extends JFrame{
 
-    private JButton runButton = new JButton("Run Application");
+    private JButton runButton = new JButton("Compute Routes");
     
     private JTextField costField = new JTextField(20);
     private JTextField capacityField = new JTextField(20);
@@ -37,7 +37,7 @@ public class InputGUI extends JFrame{
         runButton.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         add(Box.createRigidArea(new Dimension(0,10))); //empty spacing 
-        add(GuiUtilities.centeredJLabel("Welcome! Please enter your login information."));
+        add(GuiUtilities.centeredJLabel("Welcome! Please enter the system information."));
         add(Box.createRigidArea(new Dimension(0,10))); //empty spacing 
         add(GuiUtilities.centeredJLabel("Ticket Price:"));
         add(costField);
