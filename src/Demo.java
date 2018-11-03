@@ -2,10 +2,17 @@ import java.util.ArrayList;
 
 public class Demo {
 	
-	public static void main(String [] args) {
-		
+	String filename;
+	public Demo(String f) {
+		filename = f;
+	}
+	
+	public void runDemo() {
+
 		Bus.setCapacity(10); // TODO set this via GUI input
 		
+		Bus.setTicketCost(2); // TODO set this via GUI input
+
 		float expenseCost = 0;
 		
 		
@@ -16,7 +23,7 @@ public class Demo {
 			routes[i] = new BusRoute();
 		}
 		
-		String filename = "first_test_spaces.txt";
+//		String filename = "first_test_spaces.txt";
 		
 		ReadInputFile reader = new ReadInputFile(filename);
 		
@@ -43,11 +50,18 @@ public class Demo {
 		for(BusRoute route : routes) {
 			expenseCost += route.getRouteCost(); // cost to operate per block
 			expenseCost -= route.totalPplServed * Bus.getTicketCost(); //subtract ticket revenue 
-
+			System.out.println("Path length of this route: "+route.pathLength);
 		}
 		
-		
-		
+		System.out.println("expense cost: "+expenseCost);
+
 	}
+	
+	/* //test
+	public static void main(String [] args) {
+		Demo d = new Demo();
+		d.runDemo();
+	}
+	*/
 
 }

@@ -60,7 +60,7 @@ public class BusRoute {
 			BusStop b = new BusStop(curx, cury);
 			path.add(b);
 			pathLength++;
-			System.out.println("Passed intersection"+b.toString());
+			System.out.println("Passed intersection: "+b.toString());
 		}
 	}
 

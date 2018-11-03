@@ -1,5 +1,7 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
 
@@ -21,8 +23,18 @@ public class InputController {
 			if(validInputs()) {
 				//run logic 
 				
-				
-				
+				String filename = inputGUI.getFileNameInput();
+				File f = new File(filename);
+				if(!f.exists() || f.isDirectory()) { 
+				    // error
+					System.err.println("Error opening file!");
+					JOptionPane.showMessageDialog(null, "Error: Couldn't find file", "Error",
+							JOptionPane.WARNING_MESSAGE);
+					inputGUI.clearFields();
+					return;
+				}
+				Demo d = new Demo(filename);
+				d.runDemo();
 				//display output
 				
 				
@@ -47,5 +59,6 @@ public class InputController {
 		
 		
 	}//end of inner class LoginButtonListener
+	
 
 }
