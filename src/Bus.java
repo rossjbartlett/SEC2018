@@ -3,7 +3,7 @@ public class Bus {
 
 	private static int capacity;
 	private static float ticketCost;
-	private int popleOnBus;
+	private int peopleOnBus;
 	
 	Bus(int capacity, float ticketCost)
 	{
