@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class BusRoute {
 
 	int pathLength;
-	final float COST_PER_BLOCK = 5;
+	final float COST_PER_BLOCK = (float) 2.5;
 	private ArrayList<BusStop> path;
 	//	private ArrayList<BusStop> route;
 	//private ArrayList<Bus> busses;
