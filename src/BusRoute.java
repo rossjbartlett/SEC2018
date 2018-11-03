@@ -8,7 +8,6 @@ public class BusRoute {
 	
 
 	public BusRoute() {
-		algorithm = new RouteAlgorithm();
 	}
 	
 	
@@ -17,9 +16,13 @@ public class BusRoute {
 		return busses;
 	}
 	
-	public void AddToRoute(InputLine line)
-	{
-		algorithm.AddToRoute(line);
+	public void AddToRoute(InputLine line) {
+		BusStop pickupStop = new BusStop(line.stopx, line.stopy);
+		BusStop destStop = new BusStop(line.destx, line.desty);
+		
+		//if not enuff buses, add another bus
+		//if(line.numPpl > (BUS_CAPACITY * buses.size())) buses.add( new Bus(BUS_CAPACITY, BUS_COST))
+
 	}
 
 	public void setBusses(ArrayList<Bus> busses) {

@@ -22,7 +22,6 @@ public class ReadInputFile {
 
 		try {
 			scanner = new Scanner(new File(filename));
-			//scanner.useDelimiter("\\D"); // use non-digits as a delim
 
 			int stopx, stopy, destx, desty, numPpl;
 			while(scanner.hasNextLine())
