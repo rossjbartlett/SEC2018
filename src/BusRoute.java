@@ -8,6 +8,8 @@ public class BusRoute {
 	
 
 	public BusRoute() {
+		stops = new ArrayList<>();
+		stops.add(new BusStop(0, 0));// starting point 
 	}
 	
 	
@@ -23,7 +25,32 @@ public class BusRoute {
 		//if not enuff buses, add another bus
 		//if(line.numPpl > (BUS_CAPACITY * buses.size())) buses.add( new Bus(BUS_CAPACITY, BUS_COST))
 
+		getToStop(pickupStop);
+		getToStop(destStop);
 	}
+
+	private void getToStop(BusStop destStop) {
+
+		int curx = stops.get(stops.size()-1).getI(); 
+		int cury = stops.get(stops.size()-1).getJ();
+		
+		while(curx != destStop.getI()) {
+			if (destStop.getI() > curx) curx ++;
+			else curx--;
+			BusStop b = new BusStop(curx, cury);
+			stops.add(b);
+			System.out.println("Added stop: "+b.toString());
+		}
+		while(cury != destStop.getJ()) {
+			if (destStop.getJ() > cury) cury ++;
+			else cury--;
+
+			BusStop b = new BusStop(curx, cury);
+			stops.add(b);
+			System.out.println("Added stop: "+b.toString());
+		}
+	}
+
 
 	public void setBusses(ArrayList<Bus> busses) {
 		this.busses = busses;

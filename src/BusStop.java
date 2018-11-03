@@ -2,6 +2,7 @@
 
 public class BusStop {
 	
+
 	private int i, j, peopleWaiting;
 	
 	BusStop(int i, int j)
@@ -27,5 +28,11 @@ public class BusStop {
 	
 	public void dorpOff(int num) {
 		peopleWaiting-=num;
+	}
+	
+
+	@Override
+	public String toString() {
+		return "[" + i + "," + j + "]";
 	}
 }
