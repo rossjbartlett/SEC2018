@@ -35,7 +35,6 @@ public class InputController {
 				}
 				Demo d = new Demo(filename);
 				d.runDemo();
-				//display output
 				
 				OutputGUIPanel [] panels = new OutputGUIPanel[3];
 				for(int i = 0; i < 3; i++) {
@@ -45,7 +44,7 @@ public class InputController {
 				OutputGUI outGUI = new OutputGUI(d.expenseCost, panels[0], panels[1], panels[2]);
 				
 				
-				
+				//display output
 			}
 			else {
 				JOptionPane.showMessageDialog(null, "Error: Invalid inputs, please try again", "Error",

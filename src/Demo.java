@@ -28,6 +28,8 @@ public class Demo {
 		
 		ArrayList<InputLine> inputLines = reader.readLines();
 		
+		sortInput(inputLines);
+		
 		int lineCount = 0;
 		//System.out.println("Printing lines read:");
 		for(InputLine line : inputLines) {
@@ -54,6 +56,17 @@ public class Demo {
 		
 		System.out.println("expense cost: "+expenseCost);
 		return routes;
+	}
+
+	private void sortInput(ArrayList<InputLine> inputLines) {
+		for(int i=1,j; i<inputLines.size(); i++) {
+			InputLine tmp = inputLines.get(i);
+			for(j=i; j>0 && tmp.distanceFromStart < inputLines.get(j-1).distanceFromStart; j--) {
+				inputLines.set(j, inputLines.get(j-1));
+			}
+			inputLines.set(j, tmp);
+		}
+		
 	}
 	
 	/* //test
