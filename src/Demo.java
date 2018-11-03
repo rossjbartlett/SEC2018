@@ -4,7 +4,7 @@ public class Demo {
 	
 	public static void main(String [] args) {
 		
-		String filename = "first_test.txt";
+		String filename = "first_test_spaces.txt";
 		
 		ReadInputFile reader = new ReadInputFile(filename);
 		
