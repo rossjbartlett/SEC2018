@@ -2,22 +2,30 @@
 
 public class BusStop {
 	
-	private int peopleWaiting;
-
+	private int i, j, peopleWaiting;
 	
-	
-	public BusStop(int peopleWaiting) {
-		this.peopleWaiting = peopleWaiting;
-	}
-
-	public int getPeopleWaiting() {
-		return peopleWaiting;
-	}
-
-	public void setPeopleWaiting(int peopleWaiting) {
-		this.peopleWaiting = peopleWaiting;
+	BusStop(int i, int j)
+	{
+		this.i = i;
+		this.j = j;
+		peopleWaiting = 0;
 	}
 	
+	public int getI()
+	{
+		return i;
+	}
 	
+	public int getJ()
+	{
+		return j;
+	}
 	
+	public void pickUp(int num) {
+		peopleWaiting+=num;
+	}
+	
+	public void dorpOff(int num) {
+		peopleWaiting-=num;
+	}
 }
