@@ -3,12 +3,18 @@
 public class BusStop {
 	
 
-	private int i, j, peopleWaiting;
+	private int x, y, peopleWaiting;
+	
+	BusStop(int i, int j){ // used by BusRoute.java
+		this.x = i;
+		this.y = j;
+	}
+
 	
 	BusStop(int i, int j, boolean pickUp, int peopleWaiting)
 	{
-		this.i = i;
-		this.j = j;
+		this.x = i;
+		this.y = j;
 		if(pickUp) {
 			this.peopleWaiting = peopleWaiting;
 		}
@@ -17,14 +23,14 @@ public class BusStop {
 		}
 	}
 	
-	public int getI()
+	public int getX()
 	{
-		return i;
+		return x;
 	}
 	
-	public int getJ()
+	public int getY()
 	{
-		return j;
+		return y;
 	}
 	
 	public int getPeople() {
@@ -34,6 +40,6 @@ public class BusStop {
 
 	@Override
 	public String toString() {
-		return "[" + i + "," + j + "]";
+		return "[" + x + "," + y + "]";
 	}
 }

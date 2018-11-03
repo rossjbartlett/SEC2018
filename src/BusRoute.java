@@ -2,15 +2,18 @@ import java.util.ArrayList;
 
 public class BusRoute {
 
-	private ArrayList<BusStop> stops;
+	int pathLength;
+	final float COST_PER_BLOCK = 5;
+	private ArrayList<BusStop> path;
 	//	private ArrayList<BusStop> route;
 	//private ArrayList<Bus> busses;
 	int numBuses=0;
+	int totalPplServed = 0;
 
 
 	public BusRoute() {
-		stops = new ArrayList<>();
-		stops.add(new BusStop(0, 0));// starting point 
+		path = new ArrayList<>();
+		path.add(new BusStop(0, 0 ));// starting point 
 	}
 
 
@@ -22,49 +25,57 @@ public class BusRoute {
 		BusStop pickupStop = new BusStop(line.stopx, line.stopy);
 		BusStop destStop = new BusStop(line.destx, line.desty);
 
+		totalPplServed += line.numPpl;
 
-
-		//if not enuff buses, add another bus
+		//if not enough buses, add another bus
 		while(line.numPpl > (Bus.getCapacity() * numBuses)) {
-			//			buses.add( new Bus(BUS_CAPACITY, BUS_COST))
 			numBuses++;
 		}
 		
+		System.out.println("Heading to pickup location");
 		getToStop(pickupStop);
+		System.out.println("Picked up people");
 		getToStop(destStop);
+		System.out.println("Dropped off people");
 
 	}
 
 	private void getToStop(BusStop destStop) {
 
-		int curx = stops.get(stops.size()-1).getI(); 
-		int cury = stops.get(stops.size()-1).getJ();
+		int curx = path.get(path.size()-1).getX(); 
+		int cury = path.get(path.size()-1).getY();
 
-		while(curx != destStop.getI()) {
-			if (destStop.getI() > curx) curx ++;
+		while(curx != destStop.getX()) {
+			if (destStop.getX() > curx) curx ++;
 			else curx--;
 			BusStop b = new BusStop(curx, cury);
-			stops.add(b);
-			System.out.println("Added stop: "+b.toString());
+			path.add(b);
+			pathLength++;
+			System.out.println("Passed intersection: "+b.toString());
 		}
-		while(cury != destStop.getJ()) {
-			if (destStop.getJ() > cury) cury ++;
+		while(cury != destStop.getY()) {
+			if (destStop.getY() > cury) cury ++;
 			else cury--;
 
 			BusStop b = new BusStop(curx, cury);
-			stops.add(b);
-			System.out.println("Added stop: "+b.toString());
+			path.add(b);
+			pathLength++;
+			System.out.println("Passed intersection"+b.toString());
 		}
 	}
 
 
 
 	public ArrayList<BusStop> getStops() {
-		return stops;
+		return path;
 	}
 
 	public void setStops(ArrayList<BusStop> stops) {
-		this.stops = stops;
+		this.path = stops;
+	}
+	
+	public float getRouteCost() {
+		return pathLength * COST_PER_BLOCK * numBuses;
 	}
 
 

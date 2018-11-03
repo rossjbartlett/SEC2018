@@ -6,6 +6,11 @@ public class Demo {
 		
 		Bus.setCapacity(10); // TODO set this via GUI input
 		
+		float expenseCost = 0;
+		
+		
+		
+		
 		BusRoute [] routes = new BusRoute[3];
 		for(int i = 0; i < 3; i++) {
 			routes[i] = new BusRoute();
@@ -30,9 +35,15 @@ public class Demo {
 			route.AddToRoute(line);
 			System.out.println("Buses needed: "+route.numBuses);
 			System.out.println("\n");
-
+		
 			
 			lineCount = (lineCount+1)%3;
+		}
+		
+		for(BusRoute route : routes) {
+			expenseCost += route.getRouteCost(); // cost to operate per block
+			expenseCost -= route.totalPplServed * Bus.getTicketCost(); //subtract ticket revenue 
+
 		}
 		
 		

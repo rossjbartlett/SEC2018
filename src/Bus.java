@@ -22,11 +22,11 @@ public class Bus {
 	}
 	
 	
-	public static float getCost()
+	public static float getTicketCost()
 	{
 		return ticketCost;
 	}
-	public static void setCost(float c)
+	public static void setTicketCost(float c)
 	{
 		ticketCost = c;
 	}
