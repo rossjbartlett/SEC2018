@@ -2,21 +2,22 @@
 
 public class BusStop {
 	
-	private int i, j;
+	private int peopleWaiting;
+
 	
-	BusStop(int i, int j)
-	{
-		this.i = i;
-		this.j = j;
+	
+	public BusStop(int peopleWaiting) {
+		this.peopleWaiting = peopleWaiting;
+	}
+
+	public int getPeopleWaiting() {
+		return peopleWaiting;
+	}
+
+	public void setPeopleWaiting(int peopleWaiting) {
+		this.peopleWaiting = peopleWaiting;
 	}
 	
-	public int getI()
-	{
-		return i;
-	}
 	
-	public int getJ()
-	{
-		return j;
-	}
+	
 }
