@@ -6,8 +6,9 @@ import javax.swing.JPanel;
 
 public class OutputGUIPanel extends JPanel{
 
-	public OutputGUIPanel(String routeName, BusRoute route) {
-	
+	public OutputGUIPanel(int routeNumber, BusRoute route) {
+		
+		
 	}
 
 }
