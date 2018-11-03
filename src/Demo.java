@@ -3,22 +3,21 @@ import java.util.ArrayList;
 public class Demo {
 	
 	String filename;
+	BusRoute [] routes;
+	float expenseCost = 0;
+
+	
 	public Demo(String f) {
 		filename = f;
 	}
 	
-	public void runDemo() {
+	public BusRoute[] runDemo() {
 
-		Bus.setCapacity(10); // TODO set this via GUI input
+//		Bus.setCapacity(10); // TODO set this via GUI input
 		
-		Bus.setTicketCost(2); // TODO set this via GUI input
-
-		float expenseCost = 0;
+//		Bus.setTicketCost(2); // TODO set this via GUI input
 		
-		
-		
-		
-		BusRoute [] routes = new BusRoute[3];
+		routes = new BusRoute[3];
 		for(int i = 0; i < 3; i++) {
 			routes[i] = new BusRoute();
 		}
@@ -54,7 +53,7 @@ public class Demo {
 		}
 		
 		System.out.println("expense cost: "+expenseCost);
-
+		return routes;
 	}
 	
 	/* //test
