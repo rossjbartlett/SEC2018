@@ -16,11 +16,16 @@ public class ReadInputFile {
 	}
 	
 	public ArrayList<InputLine> readLines() {
+		inputLines = new ArrayList<>();
+
 		Scanner scanner;
+
 		try {
 			scanner = new Scanner(new File(filename));
+			scanner.useDelimiter("\\D"); // use non-digits as a delim
+
 			int stopx, stopy, destx, desty, numPpl;
-			while(scanner.hasNextInt())
+			while(scanner.hasNextLine())
 			{
 			     stopx = scanner.nextInt();
 			     stopy = scanner.nextInt();
@@ -29,10 +34,11 @@ public class ReadInputFile {
 			     numPpl = scanner.nextInt();
 			     
 			     InputLine line = new InputLine(stopx, stopy, destx, desty, numPpl);
+			     //TODO remove for testing
+			     System.out.print("read line: "); line.printInputLine();
 			     inputLines.add(line);
 			}
 			scanner.close();
-			
 			
 			
 		} catch (FileNotFoundException e) {

@@ -8,5 +8,9 @@ public class InputLine{
 		this.desty = desty;
 		this.numPpl = numPpl;
 	}
+	
+	public void printInputLine() {
+		System.out.println(stopx+" "+ stopy+" "+destx+" "+ desty+" "+ numPpl);
+	}
 
 }
