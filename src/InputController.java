@@ -20,17 +20,19 @@ public class InputController {
 		public void actionPerformed(ActionEvent arg0) {
 			if(validInputs()) {
 				//run logic 
+				
+				
+				
 				//display output
+				
+				
 			}
 			else {
 				JOptionPane.showMessageDialog(null, "Error: Invalid inputs, please try again", "Error",
 						JOptionPane.WARNING_MESSAGE);
 				inputGUI.clearFields();
 			}
-			
-			System.out.println(inputGUI.getCostInput());
-			System.out.println(inputGUI.getCapacityInput());
-			System.out.println(inputGUI.getFileNameInput());
+
 		}
 
 		private boolean validInputs() {
