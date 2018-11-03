@@ -43,7 +43,7 @@ public class InputGUI extends JFrame{
         add(costField);
         add(GuiUtilities.centeredJLabel("Capacity:"));
         add(capacityField);
-        add(GuiUtilities.centeredJLabel("Text Field:"));
+        add(GuiUtilities.centeredJLabel("Input file name:"));
         add(fileNameField);
         add(Box.createRigidArea(new Dimension(0,10))); //empty spacing 
         add(runButton);

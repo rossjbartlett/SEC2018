@@ -5,31 +5,26 @@ public class Bus {
 	private static float ticketCost;
 	private BusRoute route;
 	private int peopleOnBus;
-	
-	Bus(int capacity, float ticketCost)
-	{
-		this.capacity = capacity;
-		this.ticketCost = ticketCost;
-	}
-	
+
 	public static int getCapacity()
 	{
-		return capacity;
+		return Bus.capacity;
 	}
 	public static void setCapacity(int c)
 	{
-		 capacity = c;
+		Bus.capacity = c;
 	}
-	
-	
+
+
 	public static float getTicketCost()
 	{
-		return ticketCost;
+		return Bus.ticketCost;
 	}
-	public static void setTicketCost(float c)
-	{
-		ticketCost = c;
+	public static void setTicketCost(float ticketCost) {
+		Bus.ticketCost = ticketCost;
 	}
-	
+
+
+
 
 }
