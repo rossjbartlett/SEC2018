@@ -39,7 +39,7 @@ public class InputGUI extends JFrame{
         add(Box.createRigidArea(new Dimension(0,10))); //empty spacing 
         add(GuiUtilities.centeredJLabel("Welcome! Please enter your login information."));
         add(Box.createRigidArea(new Dimension(0,10))); //empty spacing 
-        add(GuiUtilities.centeredJLabel("Cost:"));
+        add(GuiUtilities.centeredJLabel("Ticket Price:"));
         add(costField);
         add(GuiUtilities.centeredJLabel("Capacity:"));
         add(capacityField);
