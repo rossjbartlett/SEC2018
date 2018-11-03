@@ -1,14 +1,14 @@
 
 public class Bus {
 
-	private int capacity;
-	private float cost;
-	private BusRoute route;
+	private static int capacity;
+	private static float ticketCost;
+	private int popleOnBus;
 	
-	Bus(int capacity, float cost)
+	Bus(int capacity, float ticketCost)
 	{
 		this.capacity = capacity;
-		this.cost = cost;
+		this.ticketCost = ticketCost;
 	}
 	
 	public int getCapacity()
@@ -18,16 +18,8 @@ public class Bus {
 	
 	public float getCost()
 	{
-		return cost;
+		return ticketCost;
 	}
 	
-	public BusRoute getRoute()
-	{
-		return route;
-	}
-	
-	public void setRoute(BusRoute route)
-	{
-		this.route = route;
-	}
+
 }
