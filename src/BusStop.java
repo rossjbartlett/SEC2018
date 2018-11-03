@@ -5,11 +5,16 @@ public class BusStop {
 
 	private int i, j, peopleWaiting;
 	
-	BusStop(int i, int j)
+	BusStop(int i, int j, boolean pickUp, int peopleWaiting)
 	{
 		this.i = i;
 		this.j = j;
-		peopleWaiting = 0;
+		if(pickUp) {
+			this.peopleWaiting = peopleWaiting;
+		}
+		else {
+			this.peopleWaiting = 0;
+		}
 	}
 	
 	public int getI()
@@ -22,13 +27,9 @@ public class BusStop {
 		return j;
 	}
 	
-	public void pickUp(int num) {
-		peopleWaiting+=num;
-	}
-	
-	public void dorpOff(int num) {
-		peopleWaiting-=num;
-	}
+	public int getPeople() {
+		return this.peopleWaiting;
+	}	
 	
 
 	@Override
